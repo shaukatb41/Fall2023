@@ -18,18 +18,16 @@ import java.util.Scanner;
  jn 22nd
  */
 public class Days {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-         
-    Scanner in =new Scanner(System.in);
-    System.out.println("Enter the day number (one,two,three,four,five) in string");
-    String code = in.next();
-    Weekdays t= new Weekdays();
-    t.nameOfDay(code); 
-    }// TODO code application logic here
-    
-    
+        Scanner in = new Scanner(System.in);
+        System.out.println("Printing all days:");
+        
+        // Iterate over each day in the Day enum and print its name
+        for (Day day : Day.values()) {
+            Weekdays weekdays = new Weekdays();
+            weekdays.nameOfDay(day);
+        }
+        
+        in.close();
+    }
 }
